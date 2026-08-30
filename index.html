@@ -1,391 +1,1148 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>釜山 4天3夜 極簡情侶自由行行程表</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>2026 釜山四天三夜｜情侶自由行</title>
+
   <style>
     :root {
-      --primary: #2b6cb0;
-      --primary-light: #ebf8ff;
-      --accent: #319795;
-      --bg: #f7fafc;
-      --card-bg: #ffffff;
-      --text-main: #2d3748;
-      --text-muted: #718096;
-      --border: #e2e8f0;
-      --tag-bg: #edf2f7;
+      --navy: #16324f;
+      --blue: #2f6690;
+      --sky: #eaf6ff;
+      --coral: #ef8354;
+      --cream: #fffaf3;
+      --ink: #24323d;
+      --muted: #667782;
+      --card: #ffffff;
+      --line: #e7edf0;
+      --shadow: 0 12px 35px rgba(22, 50, 79, 0.1);
     }
+
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      background-color: var(--bg);
-      color: var(--text-main);
-      line-height: 1.6;
-      padding: 20px 12px;
+      margin: 0;
+      font-family:
+        "Noto Sans TC",
+        "Microsoft JhengHei",
+        system-ui,
+        sans-serif;
+      color: var(--ink);
+      background: linear-gradient(180deg, #f7fcff, #fffaf5);
+      line-height: 1.7;
     }
-    .container {
-      max-width: 860px;
-      margin: 0 auto;
+
+    a {
+      text-decoration: none;
+      color: inherit;
     }
-    header {
-      text-align: center;
-      margin-bottom: 24px;
-      padding-bottom: 16px;
-      border-bottom: 2px solid var(--border);
+
+    /* ===== Hero ===== */
+
+    .hero {
+      min-height: 78vh;
+      padding: 72px 7% 48px;
+      color: white;
+
+      background:
+        linear-gradient(
+          120deg,
+          rgba(10, 39, 65, 0.88),
+          rgba(22, 80, 110, 0.58)
+        ),
+        url("https://images.unsplash.com/photo-1556194796-24d0d3f1a6ef?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
     }
-    header h1 {
-      font-size: 1.6rem;
-      color: var(--primary);
-      margin-bottom: 6px;
-      letter-spacing: -0.5px;
-    }
-    header p {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-    }
-    .day-card {
-      background: var(--card-bg);
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      margin-bottom: 20px;
-      overflow: hidden;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-    }
-    .day-header {
-      background-color: var(--primary-light);
-      padding: 12px 18px;
-      border-bottom: 1px solid var(--border);
+
+    nav {
+      max-width: 1180px;
+      margin: auto;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 6px;
+      gap: 20px;
     }
-    .day-title {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--primary);
+
+    .brand {
+      font-weight: 800;
+      font-size: 1.1rem;
+      letter-spacing: 0.08em;
     }
-    .day-tag {
-      font-size: 0.8rem;
-      background: #ffffff;
-      color: var(--accent);
-      padding: 2px 8px;
-      border-radius: 6px;
-      border: 1px solid var(--border);
-      font-weight: 600;
-    }
-    .timeline {
-      padding: 16px;
-    }
-    .timeline-item {
+
+    .nav-links {
       display: flex;
-      margin-bottom: 16px;
-      position: relative;
+      gap: 22px;
+      font-size: 0.95rem;
     }
-    .timeline-item:last-child {
-      margin-bottom: 0;
+
+    .nav-links a {
+      opacity: 0.9;
+      transition: 0.2s;
     }
-    .time-slot {
-      min-width: 85px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--primary);
-      padding-top: 2px;
+
+    .nav-links a:hover {
+      opacity: 1;
+      color: #ffffff;
     }
-    .content-box {
-      flex: 1;
-      padding-left: 12px;
-      border-left: 2px solid var(--border);
+
+    .hero-content {
+      max-width: 1180px;
+      margin: 12vh auto 0;
     }
-    .item-title {
-      font-size: 0.98rem;
-      font-weight: 700;
-      margin-bottom: 3px;
-    }
-    .item-desc {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      margin-bottom: 4px;
-    }
-    .meta-tag {
+
+    .badge {
       display: inline-block;
-      font-size: 0.75rem;
-      background: var(--tag-bg);
-      color: var(--text-main);
-      padding: 2px 6px;
-      border-radius: 4px;
-      margin-right: 4px;
-      margin-top: 2px;
+
+      padding: 7px 14px;
+
+      border-radius: 999px;
+
+      background: rgba(255, 255, 255, 0.18);
+
+      border: 1px solid rgba(255, 255, 255, 0.35);
+
+      backdrop-filter: blur(8px);
     }
-    .tips-section {
-      background: var(--card-bg);
+
+    h1 {
+      margin: 20px 0 12px;
+
+      font-size: clamp(2.8rem, 7vw, 5.7rem);
+
+      line-height: 1.05;
+
+      letter-spacing: -0.04em;
+    }
+
+    .hero-description {
+      max-width: 700px;
+
+      font-size: 1.15rem;
+
+      color: #edf7fc;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+
+      margin-top: 26px;
+    }
+
+    .meta span {
+      padding: 9px 14px;
+
+      background: white;
+
+      color: var(--navy);
+
       border-radius: 12px;
-      border: 1px solid var(--border);
-      padding: 18px;
-      margin-top: 24px;
-    }
-    .tips-title {
-      font-size: 1.05rem;
+
       font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 12px;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 6px;
     }
-    .tips-list {
-      list-style-type: none;
+
+    /* ===== Main ===== */
+
+    .container {
+      max-width: 1180px;
+
+      margin: auto;
+
+      padding: 72px 24px;
     }
-    .tips-list li {
-      font-size: 0.88rem;
-      margin-bottom: 8px;
-      position: relative;
-      padding-left: 18px;
+
+    section {
+      margin-bottom: 80px;
     }
-    .tips-list li::before {
-      content: "•";
-      color: var(--accent);
-      font-size: 1.2rem;
-      position: absolute;
-      left: 4px;
-      top: -3px;
+
+    .section-title {
+      margin-bottom: 28px;
     }
-    @media (max-width: 600px) {
-      .timeline-item {
-        flex-direction: column;
+
+    .section-title h2 {
+      margin: 0;
+
+      color: var(--navy);
+
+      font-size: 2rem;
+    }
+
+    .section-title p {
+      color: var(--muted);
+    }
+
+    /* ===== Overview ===== */
+
+    .overview {
+      display: grid;
+
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 16px;
+    }
+
+    .card {
+      padding: 24px;
+
+      background: var(--card);
+
+      border: 1px solid var(--line);
+
+      border-radius: 22px;
+
+      box-shadow: var(--shadow);
+
+      transition: 0.25s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .day-label {
+      color: var(--coral);
+
+      font-size: 0.82rem;
+
+      font-weight: 800;
+    }
+
+    .card h3 {
+      margin: 7px 0;
+    }
+
+    .card p {
+      margin: 0;
+
+      color: var(--muted);
+
+      font-size: 0.92rem;
+    }
+
+    /* ===== Day Timeline ===== */
+
+    .timeline {
+      display: grid;
+      gap: 26px;
+    }
+
+    .day-panel {
+      overflow: hidden;
+
+      background: rgba(255, 255, 255, 0.9);
+
+      border: 1px solid var(--line);
+
+      border-radius: 28px;
+
+      box-shadow: var(--shadow);
+    }
+
+    .day-head {
+      padding: 28px;
+
+      color: white;
+
+      background: linear-gradient(
+        120deg,
+        var(--navy),
+        var(--blue)
+      );
+    }
+
+    .day-head h2 {
+      margin: 0;
+
+      font-size: 1.7rem;
+    }
+
+    .day-head p {
+      margin: 6px 0 0;
+
+      color: #dcecf5;
+    }
+
+    .schedule {
+      padding: 14px 28px 26px;
+    }
+
+    .item {
+      display: grid;
+
+      grid-template-columns: 140px 1fr;
+
+      gap: 22px;
+
+      padding: 17px 0;
+
+      border-bottom: 1px dashed #d8e2e7;
+    }
+
+    .item:last-child {
+      border-bottom: none;
+    }
+
+    .time {
+      font-weight: 800;
+
+      color: var(--blue);
+    }
+
+    .activity {
+      font-weight: 600;
+    }
+
+    .note {
+      display: block;
+
+      margin-top: 4px;
+
+      color: var(--muted);
+
+      font-size: 0.9rem;
+
+      font-weight: 400;
+    }
+
+    .highlight {
+      margin-top: 18px;
+
+      padding: 16px 18px;
+
+      border-radius: 16px;
+
+      background: #fff3e9;
+
+      color: #9a4f29;
+
+      font-weight: 700;
+    }
+
+    /* ===== Grid ===== */
+
+    .grid-2 {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 24px;
+    }
+
+    .box {
+      padding: 28px;
+
+      background: white;
+
+      border: 1px solid var(--line);
+
+      border-radius: 24px;
+
+      box-shadow: var(--shadow);
+    }
+
+    /* ===== Checklist ===== */
+
+    .checklist {
+      list-style: none;
+
+      padding: 0;
+
+      margin: 12px 0 0;
+    }
+
+    .checklist li {
+      padding: 10px 0;
+
+      border-bottom: 1px solid var(--line);
+    }
+
+    .checklist li:last-child {
+      border-bottom: none;
+    }
+
+    .checklist input {
+      width: 18px;
+      height: 18px;
+
+      margin-right: 10px;
+
+      vertical-align: middle;
+
+      accent-color: var(--coral);
+    }
+
+    /* ===== Budget ===== */
+
+    .budget {
+      width: 100%;
+
+      border-collapse: collapse;
+
+      margin-top: 12px;
+    }
+
+    .budget th,
+    .budget td {
+      padding: 12px;
+
+      border-bottom: 1px solid var(--line);
+
+      text-align: left;
+    }
+
+    .budget th:last-child,
+    .budget td:last-child {
+      text-align: right;
+    }
+
+    .budget th {
+      color: var(--muted);
+    }
+
+    .total {
+      color: var(--coral);
+
+      font-weight: 900;
+
+      font-size: 1.05rem;
+    }
+
+    /* ===== Tips ===== */
+
+    .tips {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 16px;
+    }
+
+    .tip {
+      padding: 22px;
+
+      background: white;
+
+      border: 1px solid var(--line);
+
+      border-radius: 20px;
+    }
+
+    .tip strong {
+      display: block;
+
+      margin-bottom: 6px;
+
+      color: var(--navy);
+
+      font-size: 1.05rem;
+    }
+
+    /* ===== Footer ===== */
+
+    footer {
+      padding: 38px;
+
+      text-align: center;
+
+      background: var(--navy);
+
+      color: #dcecf5;
+    }
+
+    /* ===== Mobile ===== */
+
+    @media (max-width: 850px) {
+
+      .overview {
+        grid-template-columns: 1fr 1fr;
       }
-      .time-slot {
-        margin-bottom: 4px;
+
+      .tips {
+        grid-template-columns: 1fr 1fr;
       }
-      .content-box {
-        border-left: none;
-        padding-left: 0;
+
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 560px) {
+
+      .hero {
+        padding: 42px 24px;
+      }
+
+      .container {
+        padding: 52px 16px;
+      }
+
+      .overview,
+      .tips {
+        grid-template-columns: 1fr;
+      }
+
+      .item {
+        grid-template-columns: 1fr;
+
+        gap: 4px;
+      }
+
+      .schedule {
+        padding: 10px 20px 20px;
+      }
+
+      h1 {
+        font-size: 3.2rem;
       }
     }
   </style>
 </head>
-<body>
-<div class="container">
 
-  <header>
-    <h1>釜山 4天3夜 情侶自由行</h1>
-    <p>2026/10/08 – 10/11 ｜ 高效率分區順遊・不走回頭路</p>
+<body>
+
+  <!-- Hero -->
+
+  <header class="hero">
+
+    <nav>
+      <div class="brand">BUSAN · 2026</div>
+
+      <div class="nav-links">
+        <a href="#itinerary">行程</a>
+        <a href="#must">必玩清單</a>
+        <a href="#budget">預算</a>
+        <a href="#tips">旅行提醒</a>
+      </div>
+    </nav>
+
+    <div class="hero-content">
+
+      <span class="badge">
+        🇰🇷 Couple Trip · 4 Days 3 Nights
+      </span>
+
+      <h1>
+        釜山，<br>
+        一起慢慢玩。
+      </h1>
+
+      <p class="hero-description">
+        四天三夜情侶自由行｜海景、夜景、咖啡、美食與浪漫夕陽。
+        用最舒服的節奏，收藏釜山最美的瞬間。
+      </p>
+
+      <div class="meta">
+        <span>📅 2026/10/8–10/11</span>
+        <span>👫 2人情侶</span>
+        <span>💰 NT$40,000 預算</span>
+        <span>✈️ 桃園 ⇄ 釜山</span>
+      </div>
+
+    </div>
+
   </header>
 
-  <!-- Day 1 -->
-  <div class="day-card">
-    <div class="day-header">
-      <span class="day-title">Day 1：10/08（四）抵達・影島文藝與西面美食</span>
-      <span class="day-tag">影島區 ➔ 西面 ➔ 荒嶺山</span>
-    </div>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="time-slot">10:00 - 11:30</div>
-        <div class="content-box">
-          <div class="item-title">抵達金海機場 ➔ 飯店 Check-in / 寄放行李</div>
-          <div class="item-desc">建議住宿選在西面站周邊，居中轉乘最省時。</div>
-          <span class="meta-tag">交通：輕軌轉地鐵2號線</span>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="time-slot">12:00 - 13:00</div>
-        <div class="content-box">
-          <div class="item-title">午餐：西面豬肉湯飯條街</div>
-          <div class="item-desc">推薦松亭3代或浦項豬肉湯飯，濃郁大骨湯底搭配韭菜、蝦醬。</div>
-          <span class="meta-tag">停留 1 hr</span>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="time-slot">13:45 - 15:45</div>
-        <div class="content-box">
-          <div class="item-title">Arte Museum Busan（影島）</div>
-          <div class="item-desc">全球最大沉浸式光影展，打卡瀑布、銀河海浪與玫瑰花海，冷氣舒適好拍照。</div>
-          <span class="meta-tag">交通：地鐵1號線南浦站轉公車/計程車約10分</span>
-          <span class="meta-tag">停留 2 hrs</span>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="time-slot">16:15 - 18:00</div>
-        <div class="content-box">
-          <div class="item-title">白淺灘文化村（Huinnyeoul）</div>
-          <div class="item-desc">沿著海崖漫步，打卡臨海階梯與海岸隧道，找一間無敵海景咖啡廳賞夕陽。</div>
-          <span class="meta-tag">交通：影島內公車/計程車約12分</span>
-          <span class="meta-tag">停留 1.5 - 2 hrs</span>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="time-slot">18:45 - 20:00</div>
-        <div class="content-box">
-          <div class="item-title">晚餐：西面烤厚切五花肉（如熟達烤肉或味贊王）</div>
-          <div class="item-desc">專人代烤金黃酥脆的熟成五花肉，配大醬湯與冷麵。</div>
-          <span class="meta-tag">停留 1.2 hrs</span>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="time-slot">20:30 - 21:45</div>
-        <div class="content-box">
-          <div class="item-title">荒嶺山夜景烽燧台</div>
-          <div class="item-desc">情侶必訪浪漫制高點，360度俯瞰廣安大橋與整座釜山市區燈火。</div>
-          <span class="meta-tag">交通：西面搭計程車直達烽燧台停車場（約20分）</span>
-          <span class="meta-tag">停留 1 hr</span>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- Day 2 -->
-  <div class="day-card">
-    <div class="day-header">
-      <span class="day-title">Day 2：10/09（五）東釜山動感與海景浪漫</span>
-      <span class="day-tag">機張區 ➔ 海雲台</span>
-    </div>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="time-slot">09:30 - 11:00</div>
-        <div class="content-box">
-          <div class="item-title">海東龍宮寺</div>
-          <div class="item-desc">韓國唯一座落在海邊崖壁上的寺廟，清晨波光粼粼最清幽好拍。</div>
-          <span class="meta-tag">交通：東海線奧西利亞(Osiria)站轉公車/計程車</span>
-          <span class="meta-tag">停留 1.5 hrs</span>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="time-slot">11:15 - 13:30</div>
-        <div class="content-box">
-          <div class="item-title">Skyline Luge 斜坡滑車 + 園區午餐</div>
-          <div class="item-desc">搭乘纜車上山，沿著海景賽道高速滑行（建議買3回券，刺激過癮）。</div>
-          <span class="meta-tag">交通：步行/計程車 3分</span>
-          <span class="meta-tag">停留 2 hrs</span>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="time-slot">13:45 - 16:15</div>
-        <div class="content-box">
-          <div class="item-title">釜山樂天世界冒險樂園</div>
-          <div class="item-desc">童話歐風城堡打卡、挑戰 Giant Digger 雲霄飛車與 Giant Splash 水上設施。</div>
-          <span class="meta-tag">交通：步行即可到達</span>
-          <span class="meta-tag">停留 2.5 hrs</span>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="time-slot">16:45 - 17:45</div>
-        <div class="content-box">
-          <div class="item-title">釜山天空膠囊列車（松亭 ➔ 尾浦）</div>
-          <div class="item-desc">搭乘繽紛的雙人膠囊車廂，貼著海岸線緩慢行駛，秋日日落海景第一排。</div>
-          <span class="meta-tag">交通：計程車至松亭站</span>
-          <span class="meta-tag">需提前於官網預訂 16:30-17:00 梯次</span>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="time-slot">18:15 - 20:30</div>
-        <div class="content-box">
-          <div class="item-title">晚餐：海雲台烤盲鰻 / 海鮮鍋 ➔ 海雲台傳統市場</div>
-          <div class="item-desc">品嚐辣炒盲鰻、盲鰻炒飯、蜂巢冰淇淋與海雲台名物糖餅。</div>
-          <span class="meta-tag">停留 2 hrs</span>
-        </div>
-      </div>
-    </div>
-  </div>
+  <main class="container">
 
-  <!-- Day 3 -->
-  <div class="day-card">
-    <div class="day-header">
-      <span class="day-title">Day 3：10/10（六）人文童話、老城煙火氣與港灣夜景</span>
-      <span class="day-tag">甘川洞 ➔ 南浦洞 ➔ 廣安里</span>
-    </div>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="time-slot">09:30 - 11:30</div>
-        <div class="content-box">
-          <div class="item-title">甘川洞文化村</div>
-          <div class="item-desc">繽紛階梯彩繪屋，排隊打卡「小王子與狐狸」同框俯瞰港口經典機位。</div>
-          <span class="meta-tag">交通：土城站轉小巴（沙下1-1或西區2）</span>
-          <span class="meta-tag">停留 2 hrs</span>
-        </div>
+    <!-- Overview -->
+
+    <section>
+
+      <div class="section-title">
+        <h2>旅行總覽</h2>
+        <p>休閒、不趕路，把時間留給美食與彼此。</p>
       </div>
-      <div class="timeline-item">
-        <div class="time-slot">12:00 - 15:30</div>
-        <div class="content-box">
-          <div class="item-title">南浦洞商圈探索 + 札嘎其海鮮市場</div>
-          <div class="item-desc">
-            午餐：札嘎其/南浦洞生魚片或海鮮煎餅。<br>
-            逛街：BIFF 廣場吃元祖黑糖餅、光復路時尚街、樂天百貨光復店空中花園。
+
+      <div class="overview">
+
+        <div class="card">
+          <span class="day-label">DAY 01 · 10/8</span>
+          <h3>抵達與夜生活</h3>
+          <p>
+            西面休息 → 廣安里 →
+            廣安大橋 → Millac The Market
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="day-label">DAY 02 · 10/9</span>
+          <h3>經典釜山</h3>
+          <p>
+            甘川文化村 → 札嘎其 →
+            南浦洞 → 荒嶺山
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="day-label">DAY 03 · 10/10</span>
+          <h3>海景與夕陽</h3>
+          <p>
+            海雲台 → Sky Capsule →
+            青沙浦 → 伴手禮
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="day-label">DAY 04 · 10/11</span>
+          <h3>悠閒返程</h3>
+          <p>
+            早餐 → 最後購物 →
+            金海機場 → 桃園
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Itinerary -->
+
+    <section id="itinerary">
+
+      <div class="section-title">
+        <h2>四日行程表</h2>
+        <p>依照你的指定重點安排，保留足夠休息時間。</p>
+      </div>
+
+      <div class="timeline">
+
+
+        <!-- Day 1 -->
+
+        <div class="day-panel">
+
+          <div class="day-head">
+            <h2>Day 1｜10/8（四）</h2>
+            <p>✈️ 抵達釜山＋🌉 廣安里夜生活</p>
           </div>
-          <span class="meta-tag">交通：地鐵1號線南浦站 / 札嘎其站</span>
-          <span class="meta-tag">停留 3.5 hrs</span>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="time-slot">16:30 - 18:30</div>
-        <div class="content-box">
-          <div class="item-title">Millac The Market 複合文化空間</div>
-          <div class="item-desc">坐在挑高紅磚大階梯上，透過整片落地窗看港口日落，享用手作點心、精釀啤酒。</div>
-          <span class="meta-tag">交通：地鐵2號線民樂站 / 廣安站轉計程車</span>
-          <span class="meta-tag">停留 2 hrs</span>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="time-slot">18:45 - 21:00</div>
-        <div class="content-box">
-          <div class="item-title">廣安里海灘 + 廣安大橋夜景（+ 週六無人機秀）</div>
-          <div class="item-desc">晚餐可選面海的烤生蠔/刺身店，週六晚間海灘通常有無人機燈光秀（依官方公告梯次欣賞）。</div>
-          <span class="meta-tag">停留 2 - 2.5 hrs</span>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- Day 4 -->
-  <div class="day-card">
-    <div class="day-header">
-      <span class="day-title">Day 4：10/11（日）田浦文青咖啡・伴手禮採買・回程</span>
-      <span class="day-tag">西面 / 田浦 ➔ 返程</span>
-    </div>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="time-slot">10:00 - 12:00</div>
-        <div class="content-box">
-          <div class="item-title">田浦咖啡街（Jeonpo Cafe Street）</div>
-          <div class="item-desc">打卡社群高人氣文青老宅咖啡館（如 Off.currence 或 FM Coffee），享用 Brunch 與手沖。</div>
-          <span class="meta-tag">交通：西面站步行約 8 分</span>
-          <span class="meta-tag">停留 2 hrs</span>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="time-slot">12:00 - 14:00</div>
-        <div class="content-box">
-          <div class="item-title">西面地下街 / 樂天免稅店採買 ➔ 午餐（韓式炸醬麵/冷麵）</div>
-          <div class="item-desc">採購韓國美妝、零食伴手禮，整理行李。</div>
-          <span class="meta-tag">停留 2 hrs</span>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="time-slot">14:00 ➔</div>
-        <div class="content-box">
-          <div class="item-title">前往金海國際機場</div>
-          <div class="item-desc">提早 2.5 至 3 小時抵達機場辦理登機與退稅，滿載而歸。</div>
-          <span class="meta-tag">交通：地鐵轉輕軌約 45 分</span>
-        </div>
-      </div>
-    </div>
-  </div>
+          <div class="schedule">
 
-  <!-- Tips -->
-  <div class="tips-section">
-    <div class="tips-title">💡 達人筆記與行前必備 Tips</div>
-    <ul class="tips-list">
-      <li><strong>膠囊列車搶票：</strong>膠囊列車（松亭往尾浦方向）靠海側視線最佳且正對夕陽，請務必在搭乘日前兩週於官網預約下午 16:30-17:00 區段。</li>
-      <li><strong>交通與導航：</strong>韓國境內 Google Maps 步行導航不精確，請務必下載 <strong>Naver Map</strong> 或 <strong>KakaoMap</strong>。短程（如影島內部、上荒嶺山）直接用 <strong>Kakao T</strong> 叫計程車更省時。</li>
-      <li><strong>Visit Busan Pass 評估：</strong>此行程涵蓋 Arte Museum、樂天世界、Skyline Luge 等大點，建議購買 24/48 小時通行證，門票省近一半。</li>
-      <li><strong>10 月穿搭與天氣：</strong>10 月釜山秋高氣爽（約 14°C - 22°C），早晚海風大且溫差明顯，建議採洋蔥式穿搭，並隨身攜帶防風薄外套或圍巾。</li>
-    </ul>
-  </div>
+            <div class="item">
+              <div class="time">02:30</div>
+              <div class="activity">桃園機場起飛</div>
+            </div>
 
-</div>
+            <div class="item">
+              <div class="time">06:15–09:00</div>
+              <div class="activity">
+                抵達金海國際機場
+                <span class="note">
+                  入境、交通卡／WOWPASS、前往市區
+                </span>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="time">09:30–11:00</div>
+              <div class="activity">
+                西面悠閒早餐＋咖啡
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="time">12:00–14:00</div>
+              <div class="activity">
+                午餐：豬肉湯飯／釜山冷麵
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="time">14:00–16:30</div>
+              <div class="activity">
+                住宿寄放行李或入住後休息
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="time">17:30–19:30</div>
+              <div class="activity">
+                廣安里海水浴場＋廣安大橋黃昏＋晚餐
+                <span class="note">
+                  📸 情侶必拍：沙灘、黃昏、亮燈後的大橋
+                </span>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="time">20:00–22:30</div>
+              <div class="activity">
+                Millac The Market 夜生活
+                <span class="note">
+                  🍺 美食、酒吧、音樂與潮流氛圍
+                </span>
+              </div>
+            </div>
+
+            <div class="highlight">
+              ❤️ 今日亮點：廣安大橋夜景 → Millac The Market → 海邊散步
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Day 2 -->
+
+        <div class="day-panel">
+
+          <div class="day-head">
+            <h2>Day 2｜10/9（五）</h2>
+            <p>🎨 甘川文化村＋🍢 南浦洞＋🌃 荒嶺山</p>
+          </div>
+
+          <div class="schedule">
+
+            <div class="item">
+              <div class="time">09:00–12:00</div>
+              <div class="activity">
+                甘川文化村拍照
+                <span class="note">
+                  小王子、彩色房屋、山景巷弄
+                </span>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="time">12:30–14:00</div>
+              <div class="activity">
+                札嘎其市場午餐：釜山海鮮
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="time">14:00–17:30</div>
+              <div class="activity">
+                南浦洞＋BIFF廣場＋國際市場
+                <span class="note">
+                  必吃：씨앗호떡、魚板、韓式小吃
+                </span>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="time">17:30–19:00</div>
+              <div class="activity">
+                回住宿休息＋簡單晚餐
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="time">20:00–22:00</div>
+              <div class="activity">
+                荒嶺山觀測所夜景
+                <span class="note">
+                  🚕 建議夜間搭計程車／叫車
+                </span>
+              </div>
+            </div>
+
+            <div class="highlight">
+              🌃 今日亮點：一次收集釜山市區與廣安大橋夜景。
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Day 3 -->
+
+        <div class="day-panel">
+
+          <div class="day-head">
+            <h2>Day 3｜10/10（六）</h2>
+            <p>🌊 海雲台＋🚠 Sky Capsule＋🌅 青沙浦夕陽</p>
+          </div>
+
+          <div class="schedule">
+
+            <div class="item">
+              <div class="time">10:00</div>
+              <div class="activity">
+                海雲台海灘散步、拍照
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="time">11:30–13:00</div>
+              <div class="activity">
+                午餐：釜山冷麵／豬肉湯飯／海鮮
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="time">13:00–15:30</div>
+              <div class="activity">
+                海雲台傳統市場＋海景咖啡廳
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="time">約16:00</div>
+              <div class="activity">
+                前往尾浦站搭 Sky Capsule
+                <span class="note">
+                  ⚠️ 週六建議提前預約
+                </span>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="time">傍晚</div>
+              <div class="activity">
+                青沙浦海邊、紅白燈塔、欣賞夕陽
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="time">18:30–20:00</div>
+              <div class="activity">
+                購買伴手禮
+                <span class="note">
+                  魚板、零食、海苔、釜山文創
+                </span>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="time">20:00</div>
+              <div class="activity">
+                浪漫晚餐：烤肉／海鮮／海景餐廳
+              </div>
+            </div>
+
+            <div class="highlight">
+              🌅 今日亮點：海景＋膠囊列車＋釜山最浪漫的夕陽。
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Day 4 -->
+
+        <div class="day-panel">
+
+          <div class="day-head">
+            <h2>Day 4｜10/11（日）</h2>
+            <p>🛍️ 最後購物＋✈️ 返回台灣</p>
+          </div>
+
+          <div class="schedule">
+
+            <div class="item">
+              <div class="time">09:00</div>
+              <div class="activity">
+                悠閒早餐／咖啡／Brunch
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="time">10:30–13:00</div>
+              <div class="activity">
+                最後購物：西面或海雲台商圈
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="time">13:00–14:00</div>
+              <div class="activity">
+                最後一餐：豬肉湯飯或韓式套餐
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="time">14:30–15:00</div>
+              <div class="activity">
+                回住宿拿行李
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="time">15:30</div>
+              <div class="activity">
+                前往金海國際機場
+                <span class="note">
+                  預留退稅、托運與出境時間
+                </span>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="time">18:50</div>
+              <div class="activity">
+                釜山起飛
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="time">20:30</div>
+              <div class="activity">
+                抵達台灣 🇹🇼
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Must -->
+
+    <section id="must">
+
+      <div class="grid-2">
+
+        <div class="box">
+
+          <h2>🎯 必去清單</h2>
+
+          <ul class="checklist">
+
+            <li><label><input type="checkbox">廣安里＋廣安大橋夜景</label></li>
+            <li><label><input type="checkbox">Millac The Market</label></li>
+            <li><label><input type="checkbox">甘川文化村</label></li>
+            <li><label><input type="checkbox">札嘎其市場</label></li>
+            <li><label><input type="checkbox">南浦洞＋BIFF＋國際市場</label></li>
+            <li><label><input type="checkbox">荒嶺山夜景</label></li>
+            <li><label><input type="checkbox">海雲台</label></li>
+            <li><label><input type="checkbox">Sky Capsule</label></li>
+            <li><label><input type="checkbox">青沙浦夕陽</label></li>
+
+          </ul>
+
+        </div>
+
+
+        <div class="box">
+
+          <h2>🍜 必吃必買</h2>
+
+          <ul class="checklist">
+
+            <li><label><input type="checkbox">豬肉湯飯 돼지국밥</label></li>
+            <li><label><input type="checkbox">釜山冷麵 밀면</label></li>
+            <li><label><input type="checkbox">씨앗호떡（糖餅）</label></li>
+            <li><label><input type="checkbox">釜山魚板 어묵</label></li>
+            <li><label><input type="checkbox">韓式炸雞／烤肉</label></li>
+            <li><label><input type="checkbox">海鮮料理</label></li>
+            <li><label><input type="checkbox">韓國零食與海苔</label></li>
+            <li><label><input type="checkbox">釜山限定文創</label></li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Budget -->
+
+    <section id="budget">
+
+      <div class="grid-2">
+
+        <div class="box">
+
+          <h2>💰 旅行預算</h2>
+
+          <table class="budget">
+
+            <tr>
+              <th>項目</th>
+              <th>2人預估</th>
+            </tr>
+
+            <tr>
+              <td>餐飲</td>
+              <td>NT$10,000–12,000</td>
+            </tr>
+
+            <tr>
+              <td>咖啡甜點</td>
+              <td>約 NT$2,000</td>
+            </tr>
+
+            <tr>
+              <td>交通</td>
+              <td>NT$2,500–3,500</td>
+            </tr>
+
+            <tr>
+              <td>Sky Capsule</td>
+              <td>約 NT$1,000–1,500</td>
+            </tr>
+
+            <tr>
+              <td>伴手禮</td>
+              <td>NT$5,000–8,000</td>
+            </tr>
+
+            <tr>
+              <td>夜生活／其他</td>
+              <td>NT$4,000–5,000</td>
+            </tr>
+
+            <tr>
+              <td>預備金</td>
+              <td>NT$5,000–7,000</td>
+            </tr>
+
+            <tr class="total">
+              <td>總計</td>
+              <td>約 NT$30,000–39,000</td>
+            </tr>
+
+          </table>
+
+        </div>
+
+
+        <div class="box">
+
+          <h2>❤️ 旅行節奏</h2>
+
+          <p>
+            <strong>Day 1：</strong>
+            抵達後先休息，把體力留給廣安里的浪漫夜晚。
+          </p>
+
+          <p>
+            <strong>Day 2：</strong>
+            集中玩西釜山經典景點，晚上再登上荒嶺山。
+          </p>
+
+          <p>
+            <strong>Day 3：</strong>
+            慢慢享受海雲台，把最浪漫的夕陽留給 Sky Capsule。
+          </p>
+
+          <p>
+            <strong>Day 4：</strong>
+            不塞景點，悠閒購物後從容前往機場。
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Tips -->
+
+    <section id="tips">
+
+      <div class="section-title">
+        <h2>⚠️ 避坑提醒</h2>
+        <p>少走冤枉路，讓旅行更舒服。</p>
+      </div>
+
+      <div class="tips">
+
+        <div class="tip">
+          <strong>😴 第一天別硬撐</strong>
+          凌晨出發、早上抵達，下午安排休息最舒服。
+        </div>
+
+        <div class="tip">
+          <strong>🚕 荒嶺山搭車</strong>
+          晚上建議搭計程車或叫車上山。
+        </div>
+
+        <div class="tip">
+          <strong>🎟️ Sky Capsule先訂</strong>
+          10/10是週六，熱門時段建議提前預約。
+        </div>
+
+        <div class="tip">
+          <strong>🦐 海鮮先問總價</strong>
+          市場海鮮依時價不同，點餐前確認價格。
+        </div>
+
+        <div class="tip">
+          <strong>🧥 10月帶薄外套</strong>
+          海邊與荒嶺山晚上風比較大。
+        </div>
+
+        <div class="tip">
+          <strong>🧖 不安排汗蒸幕</strong>
+          完全依照本次旅行偏好，把時間留給景點與美食。
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <strong>BUSAN COUPLE TRIP · 2026</strong>
+
+    <br>
+
+    四天三夜，把釜山最美的海、夜景與夕陽一起收藏。
+
+  </footer>
+
+
+  <script>
+
+    // 儲存 Checklist 狀態
+    const checkboxes = document.querySelectorAll(
+      '.checklist input[type="checkbox"]'
+    );
+
+    // 載入儲存的狀態
+    checkboxes.forEach((checkbox, index) => {
+
+      const saved = localStorage.getItem(
+        `busan-check-${index}`
+      );
+
+      if (saved === "true") {
+        checkbox.checked = true;
+      }
+
+      checkbox.addEventListener("change", () => {
+
+        localStorage.setItem(
+          `busan-check-${index}`,
+          checkbox.checked
+        );
+
+      });
+
+    });
+
+  </script>
+
 </body>
 </html>
